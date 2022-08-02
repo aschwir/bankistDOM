@@ -32,3 +32,94 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: "smooth",
+  // });
+
+  section1.scrollIntoView({ behavior: "smooth" });
+});
+
+// console.log(document.documentElement);
+// console.log(document.head);
+// console.log(document.body);
+
+// const header = document.querySelector(".header");
+// const allSections = document.querySelectorAll(".section");
+// console.log(allSections);
+
+// document.getElementById("section--1");
+// const allButtons = document.getElementsByTagName("button");
+// console.log(allButtons);
+
+// console.log(document.getElementsByClassName("btn"));
+
+//creating and inserting elements
+// const message = document.createElement("div");
+// message.classList.add("cookie-message");
+// // message.textContent ="We use cookies for improved functionality and analytics.";
+// message.innerHTML =
+//   'We use cookies for improved functionality and analytics.<button class="btn btn--close-cookie">Got it!</button >';
+// // header.prepend(message);
+// header.append(message);
+// // header.append(message.cloneNode(true))
+
+// header.before(message);
+// header.after(message);
+
+// document
+//   .querySelector(".btn--close-cookie")
+//   .addEventListener("click", function () {
+//     message.remove();
+//   });
+
+// //styles
+// message.style.backgroundColor = "#37383d";
+// message.style.width = "120%";
+
+// console.log(message.style.color);
+// console.log(message.style.backgroundColor);
+
+// console.log(getComputedStyle(message).color);
+
+// message.style.height =
+//   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + "px";
+
+// document.documentElement.style.setProperty("--color-primary", "orangered");
+
+// //attributes
+// const logo = document.querySelector(".nav__logo");
+// console.log(logo.alt);
+// console.log(logo.src);
+// console.log(logo.className);
+
+// logo.alt = "Beautiful minimalist logo";
+
+// console.log(logo.getAttribute("designer"));
+// logo.setAttribute("company", "Bankist");
+
+// logo.getAttribute("src");
+
+// console.log(logo.src);
+// console.log(logo.getAttribute("src"));
+
+// //data attributes
+// console.log(logo.dataset.versionNumber);
+
+// //classes
+// logo.classList.add();
+// logo.classList.remove();
+// logo.classList.toggle();
+// logo.classList.contains();
