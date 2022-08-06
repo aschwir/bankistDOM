@@ -120,9 +120,23 @@ const handleHover = function(e,opacity){
 }
 
 //passing arguments into handler
-nav.addEventListener('mouseover',handleHover.bind(e,0.5));
+nav.addEventListener('mouseover',handleHover.bind(0.5));
 
-nav.addEventListener('mouseout', handleHover.bind(e,1));
+nav.addEventListener('mouseout', handleHover.bind(1));
+
+
+//sticky navigation
+const initialCoords = section1.getBoundingClientRect();
+
+window.addEventListener('scroll',function(){
+  console.log(window.scrollY);
+
+  if(this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+})
+
+
+
 
 
 
